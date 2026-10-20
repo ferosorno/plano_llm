@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Un chat sencillo impulsado por GPT-5" />
+    <meta name="theme-color" content="#f5f6fa" />
+    <title>Chat de IA</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/chat.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="Chat de IA, inicio">
+          <span class="brand-mark" aria-hidden="true">✳</span>
+          <span>claro<span class="brand-dot">.</span></span>
+        </a>
+        <span class="model-chip"><span class="status-dot"></span> GPT-5</span>
+      </header>
+
+      <section class="chat-panel" aria-labelledby="page-title">
+        <div class="welcome">
+          <div class="welcome-icon" aria-hidden="true">✳</div>
+          <p class="eyebrow">Tu espacio para explorar</p>
+          <h1 id="page-title">¿Qué tienes en mente?</h1>
+          <p class="welcome-copy">Pregunta, crea o piensa en voz alta. Empezamos cuando quieras.</p>
+        </div>
+
+        <div id="messages" class="messages" aria-live="polite" aria-label="Conversación">
+          <article class="message assistant-message">
+            <span class="message-avatar" aria-hidden="true">✳</span>
+            <div class="message-content">¡Hola! Soy tu asistente. ¿En qué puedo ayudarte?</div>
+          </article>
+        </div>
+
+        <p id="status" class="status" role="status" aria-live="polite"></p>
+
+        <form id="chat-form" class="composer">
+          <label class="visually-hidden" for="prompt">Escribe tu mensaje</label>
+          <textarea id="prompt" name="prompt" rows="1" maxlength="4000" placeholder="Escribe tu mensaje…" required></textarea>
+          <div class="composer-footer">
+            <span class="privacy-note"><span aria-hidden="true">🔒</span> Tu clave se mantiene en el servidor</span>
+            <button id="send-button" class="send-button" type="submit" aria-label="Enviar mensaje">
+              <span>Enviar</span><span aria-hidden="true">↑</span>
+            </button>
+          </div>
+        </form>
+        <p class="disclaimer">La IA puede cometer errores. Verifica la información importante.</p>
+      </section>
+    </main>
+  </body>
+</html>
